@@ -27,19 +27,37 @@ const automobiliDiesel = [];
 const altreAlimentazioni = [];
 
 
-arrayAutomobili.forEach(auto => {
-    if (auto.alimentazione === 'benzina') {
-        automobiliBenzina.push(auto);
-    } else if (auto.alimentazione === 'diesel') {
-        automobiliDiesel.push(auto);
-    } else {
-        altreAlimentazioni.push(auto);
+// arrayAutomobili.forEach(auto => {
+//     if (auto.alimentazione === 'benzina') {
+//         automobiliBenzina.push(auto);
+//     } else if (auto.alimentazione === 'diesel') {
+//         automobiliDiesel.push(auto);
+//     } else {
+//         altreAlimentazioni.push(auto);
+//     }
+// });
+
+
+const autoBenzina = arrayAutomobili.filter((auto) => {
+    if ( auto.alimentazione.includes('benzina')) {
+        return true;
     }
-  });
+})
+
+const autoDiesel = arrayAutomobili.filter((auto) => {
+    if ( auto.alimentazione.includes('diesel')) {
+        return true;
+    }
+})
+
+const altreAlimentazioni = arrayAutomobili.filter((auto) => {
+    if ( !auto.alimentazione.includes('diesel') && !auto.alimentazione.includes('benzina') )
+    return true;
+})
 
 
-  console.log(automobiliBenzina);
-  console.log(automobiliDiesel);
-  console.log(altreAlimentazioni);
+console.log(automobiliBenzina);
+console.log(automobiliDiesel);
+console.log(altreAlimentazioni);
 
 
