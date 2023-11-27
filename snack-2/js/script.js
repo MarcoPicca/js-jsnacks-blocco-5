@@ -19,12 +19,16 @@ const people = [
     { nome: 'Maurizio', cognome: 'Cortolino', età: '32' }
 ];
 
+const driver = [];
+
 const puoGuidare = people.map((persona) => {
-    if ( persona.età < 18) {
-        console.log('Non puoi guidare');
+    if (persona.età < 18) {
+        return false;
     } else {
-        console.log('guida piano')
+        driver.push(persona);
     }
 })
+
+console.log(driver);
 
 
