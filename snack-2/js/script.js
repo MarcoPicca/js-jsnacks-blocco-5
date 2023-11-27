@@ -20,15 +20,17 @@ const people = [
 ];
 
 const driver = [];
+const notDriver = [];
 
 const puoGuidare = people.map((persona) => {
     if (persona.età < 18) {
-        return false;
+        notDriver.push(persona);
     } else {
         driver.push(persona);
     }
 })
 
 console.log(driver);
+console.log(notDriver);
 
 
