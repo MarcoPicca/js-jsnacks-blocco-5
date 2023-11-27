@@ -9,14 +9,37 @@
 
 
 let arrayAutomobili = [
-    { marca: fiat, modello: corolla, alimentazione: benzina },
-    { marca: wolksvagen, modello: modello2, alimentazione: diesel },
-    { marca: fiat, modello: modello3, alimentazione: gpl },
-    { marca: fiat, modello: modello4, alimentazione: metano },
-    { marca: fiat, modello: modello5, alimentazione: elettrico },
-    { marca: fiat, modello: modello6, alimentazione: benzina },
-    { marca: fiat, modello: modello7, alimentazione: metano },
-    { marca: fiat, modello: modello8, alimentazione: diesel },
-    { marca: fiat, modello: modello9, alimentazione: gpl },
-    { marca: fiat, modello: modello10, alimentazione: benzina }
+    { marca: 'fiat', modello: 'corolla', alimentazione: 'benzina' },
+    { marca: 'wolksvagen', modello: 'modello2', alimentazione: 'diesel' },
+    { marca: 'fiat', modello: 'modello3', alimentazione: 'gpl' },
+    { marca: 'fiat', modello: 'modello4', alimentazione: 'metano' },
+    { marca: 'fiat', modello: 'modello5', alimentazione: 'elettrico' },
+    { marca: 'fiat', modello: 'modello6', alimentazione: 'benzina' },
+    { marca: 'fiat', modello: 'modello7', alimentazione: 'metano' },
+    { marca: 'fiat', modello: 'modello8', alimentazione: 'diesel' },
+    { marca: 'fiat', modello: 'modello9', alimentazione: 'gpl' },
+    { marca: 'fiat', modello: 'modello10', alimentazione: 'benzina' }
 ];
+
+
+const automobiliBenzina = [];
+const automobiliDiesel = [];
+const altreAlimentazioni = [];
+
+
+arrayAutomobili.forEach(auto => {
+    if (auto.alimentazione === 'benzina') {
+        automobiliBenzina.push(auto);
+    } else if (auto.alimentazione === 'diesel') {
+        automobiliDiesel.push(auto);
+    } else {
+        altreAlimentazioni.push(auto);
+    }
+  });
+
+
+  console.log(automobiliBenzina);
+  console.log(automobiliDiesel);
+  console.log(altreAlimentazioni);
+
+
