@@ -11,10 +11,23 @@
 
 
 
-const app = {
+const openApp = {
     "tab": ["Facebook", "GitHub", "Gmail", "Flixbus", "Reddit", "Trenitalia", "instagram"],
     "activeTab": 0
 }
+
+const social = ["Facebook", "Reddit", "instagram"];
+
+openApp.tab = openApp.tab.filter((element) => {
+    if ( !social.includes(element.toLocaleLowerCase())){
+        return true;
+    }
+});
+
+console.log(openApp);
+
+
+
 
 
 
